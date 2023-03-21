@@ -36,19 +36,20 @@ function draw(){
     song1_status = harry_potter_song.isPlaying();
     console.log(song2_status);
 
-     if(score_left_wrist > 0.2){
+    if(score_left_wrist > 0.2){
          circle(leftWrist_x, leftWrist_y, 20);
          peter_pan_song.stop();
          if(song2_status == false){
-             harry_potter_song.play()
+             harry_potter_song.play();
          }
+    }
+
+     else{
+         console.log("Song Name:  Harry Potter Song");
+         document.getElementById("song_id").innerHTML = "Song Name: Harry Potter Song";
+     }
          
-      else{
-            console.log("Song Name: Peter Pan Song");
-            document.getElementById("song_id").innerHTML = "Song Name: Peter Pan Song";
-        }
-         
-   }   
+}   
 
 function modelLoaded(){
     console.log("poseNet Is Initialized");
